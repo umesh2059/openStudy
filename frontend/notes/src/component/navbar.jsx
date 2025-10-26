@@ -9,7 +9,7 @@ const Navbar=()=>{
                 <div className="flex-shrink-0">
                     <img 
                     className="h-8 w-auto"
-                    src="/image1.png"
+                    src="/..assets/image1.png"
                     alt="logo"/>
                 </div>
                 <div className='flex space-x-4'>
