@@ -1,12 +1,14 @@
 import { useState } from 'react'
-import './component/navbar'
+import Navbar from'./component/navbar'
+import FilterBar from './component/filterbar'
 
 import './App.css'
 
 function App() {
   return (
     <div>
-      hello 
+      <Navbar/>
+      <FilterBar/>
     </div>
   )
 }
