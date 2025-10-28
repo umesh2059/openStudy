@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA4ezre5yL7qLYe92QoVCt3NAXX-fzrq_s",
+  apiKey: process.env.API_KEY,
   authDomain: "openstudy-db63f.firebaseapp.com",
   projectId: "openstudy-db63f",
   storageBucket: "openstudy-db63f.firebasestorage.app",
