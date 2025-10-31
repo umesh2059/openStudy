@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {auth} from "./firebase";
+import {auth} from "../firebase";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 const SignUp=()=>{
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
 
-    const HandleSignup=async(e)=>{
+    const handleSignup=async(e)=>{
         e.preventDefault();
         try{
             await createUserWithEmailAndPassword(auth,email,password);
@@ -17,7 +17,7 @@ const SignUp=()=>{
         }
     }
     return(
-         <Form onSubmit={HandleSignup}className='p-4 shadow-lg rounded bg-white'>
+         <Form onSubmit={handleSignup}className='p-4 shadow-lg rounded bg-white'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" 
@@ -36,7 +36,7 @@ const SignUp=()=>{
         <Form.Control type="password"
          placeholder="Password"
          value={password}
-         onChange={(e)=>setPassword(e.target.password)} />
+         onChange={(e)=>setPassword(e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
