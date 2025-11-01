@@ -1,4 +1,5 @@
 import React from 'react';
+import image1 from '../assets/image1.png';
 
 
 const Navbar=()=>{
@@ -15,7 +16,27 @@ const Navbar=()=>{
 </nav>
  
 
+<<<<<<< Updated upstream
  )
+=======
+        <div className="max-w-7xl mx-auto px-4">
+            <div className='flex justify-between h-16 w-20 items-center bg-blue-600'>
+                <div className="flex">
+                    <h1>image1</h1>
+                </div>
+                <div className='flex'>
+                    <a href="#" className='text-gray-800 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200'>Home</a>
+                    <a href="#" className='text-gray-800 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200'>About</a>
+                    <a href="#" className='text-gray-800 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200'>Contact</a>
+                </div>
+                <div className='flex'>
+                    <button className='bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-600'>Login</button>
+                </div>
+            </div>
+        </div>
+      </nav>
+    )
+>>>>>>> Stashed changes
 }
 
 export default Navbar
