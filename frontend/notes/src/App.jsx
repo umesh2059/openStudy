@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
 import Navbar from './component/navbar'
@@ -10,14 +10,19 @@ import './App.css'
 
 function App() {
   return (
-      <Router>
+    <Router>
+    <div>
         <Navbar />
-       <Routes>
-        <Route path="/" element={<FilterBar />} />
-        <Route path="/" element={<NoteCard />} />
-       <Route path="/signup" element={<SignUp/>}/>
-       </Routes>
-          </Router>   
+        <Routes>
+          <Route path="/" element={   <>
+            <FilterBar />
+            <NoteCard/>
+         </>}/>
+        <Route path='/signup' element={<SignUp/>}/>
+        </Routes>
+  </div>
+       
+        </Router>
   )
 }
 export default App

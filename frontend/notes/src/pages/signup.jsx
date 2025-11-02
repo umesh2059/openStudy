@@ -9,7 +9,7 @@ const SignUp=()=>{
         e.preventDefault();
         try{
             await createUserWithEmailAndPassword(auth,email,password);
-            alert("signup successfully");
+            alert("signin successfully");
         }catch(error){
             alert(error.message);
         }
@@ -18,41 +18,43 @@ const SignUp=()=>{
         <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
   <div className="sm:mx-auto sm:w-full sm:max-w-sm">
     <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" className="mx-auto h-10 w-auto" />
-    <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">Sign in to your account</h2>
+    <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-black">Sign in to your account</h2>
   </div>
 
   <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form onSubmit={handleSignup} className="space-y-6">
       <div>
-        <label for="email" className="block text-sm/6 font-medium text-gray-100">Email address</label>
-        <div className="mt-2">
+        <label for="email" className="block text-sm/6 font-medium text-black">Email address</label>
+        <div className="mt-4">
           <input 
            id="email"
           type="email"
            name="email" 
+           placeholder='Enter your email '
            required autoComplete="email"
            value={email}
            onChange={(e)=>setEmail(e.target.value)}
-           className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+           className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-blue outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
         </div>
       </div>
 
       <div>
         <div className="flex items-center justify-between">
-          <label for="password" className="block text-sm/6 font-medium text-gray-100">Password</label>
+          <label for="password" className="block text-sm/6 font-medium text-black">Password</label>
           <div className="text-sm">
-            <a href="#" className="font-semibold text-indigo-400 hover:text-indigo-300">Forgot password?</a>
+            <a href="#" className="font-semibold text-blue-400 hover:text-indigo-300">Forgot password?</a>
           </div>
         </div>
         <div className="mt-2">
           <input
            id="password"
-           type="password"
+           type={password ? "text":"password"}
            name="password"
-          required autoComplete="current-password"
+           placeholder='Enter you password '
+          required autoComplete="current-password" 
           value={password}
           onChange={(e)=>setPassword(e.target.value)}
-          className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+          className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
         </div>
       </div>
 
