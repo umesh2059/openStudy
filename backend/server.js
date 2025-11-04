@@ -1,7 +1,17 @@
 import express from "express";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
+import cors from "cors";
+
 
 const app=express();
 
-// middlewares
-app.use(express.json)  //it helps allow to json parsing body
+
+app.use(express.json)  
+
+
+app
+
+
+app.listen (PORT,()=>{
+    console.log(`server is running on port ${PORT}`);
+});
