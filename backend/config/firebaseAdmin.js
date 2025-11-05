@@ -3,12 +3,14 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
+
 
 admin.initializeApp({
     credential:admin.credential.cert(server.account),
 })
 
-const db=admin.firestore();
-const auth=admin.auth();
+const db=admin.firestore();  //firestore database
+const auth=admin.auth();     //firebase authentication
 
 export  {db,auth};
