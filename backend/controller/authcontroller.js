@@ -19,4 +19,21 @@ export const verifyUser=async(req,res)=>{
 };
 
 
+// get all users (for admin)
+
+export const getAllUsers=async(req,res)=>{ 
+    try{
+        const listUserResult=await auth.listUsers();
+        const users=listUserResult.users.map((userRecord)=>({
+            uid:userRecord.uid,
+            email:userRecord.email,
+            displayName:userRecord.displayName,
+        }))
+        res.status(200).json(users);
+    }catch(error){
+        res.status(500).json({error:"error message"})
+    }
+
+}
+export default 
 
