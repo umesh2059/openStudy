@@ -5,7 +5,7 @@ export const createNote=async(req,res)=>{
        const {title,content,userId}=req.body;
        const newNote={title,content,userId,createdAt:new Date()};
        await db.collection("notes").add (newNote);
-       res.status(201).json({message:"note created succesffully"});
+       res.status(201).json({message:"note created succesffuly"});
     }catch(error){
          res.status(500).json({error:error.message})
     }
