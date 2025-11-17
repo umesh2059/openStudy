@@ -1,7 +1,9 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 const Navbar=()=>{
+
+  const navigate=useNavigate();
 
   const handleUploadclick=()=>{
     alert("button clickable")
@@ -15,7 +17,7 @@ const Navbar=()=>{
     <button className="border rounded-full px-4 py-2 bg-green-100" 
     onClick={handleUploadclick}>Ask Doubts</button>
     <button className="bg-green-500 text-white rounded-full px-4 py-2"
-    onClick={handleUploadclick}>Upload Notes</button>
+    onClick={()=>navigate("/Signup")}>Upload Notess</button>
     <img src="/image1.png" className="w-10 h-10 rounded-full" />
   </div>
 </nav>
