@@ -18,7 +18,6 @@ export const verifyUser=async(req,res)=>{
     }
 };
 
-
 // get all users (for admin)
 
 export const getAllUsers=async(req,res)=>{ 
